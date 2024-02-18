@@ -94,7 +94,7 @@ function Page() {
                 </h2>
               </div>
               <div>
-                <Link href={`/viewform/${item.id}`}>
+                <Link href={`/viewform/${item.form_id}`}>
                   <button className="bg-slate-900 text-xl p-2 rounded-md mt-6">
                     View Responses
                   </button>
