@@ -1,3 +1,6 @@
 [submodule "AnonInsight-sdk"]
 	path = AnonInsight-sdk
 	url = https://github.com/LeoFranklin015/AnonInsight-sdk.git
+[submodule "AnonInsight-be"]
+	path = AnonInsight-be
+	url = https://github.com/LeoFranklin015/AnonInsight-be.git
