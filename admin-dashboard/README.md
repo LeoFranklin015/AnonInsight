@@ -8,3 +8,11 @@ AnonInsight Dashboard is a web application designed for zk-feedback creators to 
 - **Dynamic Circuit Generation**: Utilize regex patterns to dynamically generate circuits.
 - **Sindri Integration**: Automate circuit deployment using Sindri service.
 - **Form ID and Circuit ID Retrieval**: Obtain form ID and circuit ID for creating feedback forms.
+
+### Regex Example
+
+Here's an example regex pattern that can be used: `.*sindri.com`
+
+### Sindri API Key
+
+You can retrieve your Sindri API key from [Sindri Website](https://sindri.app).
