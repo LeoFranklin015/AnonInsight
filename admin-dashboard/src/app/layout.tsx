@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import { headers } from "next/headers";
+import Nav from "../components/Nav";
+import { cookieToInitialState } from "wagmi";
 
-const inter = Inter({ subsets: ["latin"] });
+import { config } from "@/config";
+import { ContextProvider } from "@/context";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +17,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const initialState = cookieToInitialState(config, headers().get("cookie"));
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={
+          "leading-normal tracking-normal text-indigo-400 m-6 bg-cover font-mono"
+        }
+      >
+        <ContextProvider initialState={initialState}>
+          <Nav />
+          {children}
+        </ContextProvider>
+      </body>
     </html>
   );
 }
